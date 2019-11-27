@@ -1,0 +1,15 @@
+@media screen and (max-width: 500px) {
+    .grid-container {
+        grid-template-areas: 
+        "header header header"
+        "welcome welcome welcome"
+        "todo todo todo"
+        "todo todo todo";
+    }
+    .calendar {
+        display: none;
+    }
+    header {
+        font-size: 2rem;
+    }
+}
