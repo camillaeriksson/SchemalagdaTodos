@@ -6,7 +6,7 @@
         "todo todo todo"
         "todo todo todo";
     }
-    .calendar {
+    .calendar, .days{
         display: none;
     }
     header {
