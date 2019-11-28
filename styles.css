@@ -79,18 +79,22 @@ img {
 .inputandbutton {
     display: flex;
     justify-content: space-around;
+    align-items: flex-end;
     flex-wrap: wrap;
 }
 
 .todo_input {
     width: 50%;
+    height: 1.2rem;
 }
 
 .date_input {
     width: 15%;
+    height: 1.2rem;
 }
 
 .todo button {
+    margin-top: 1rem;
     border: .01rem solid white;
     background-color: transparent;
     padding: 0.5rem 1rem;
