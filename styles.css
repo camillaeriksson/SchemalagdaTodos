@@ -24,7 +24,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./kalle-kortelainen-7JtgUEYVOu0-unsplash.jpg);
+    background-image: url(./snowflake-554635_1920.jpg);
     background-size: cover;
     background-position: center;
     color: white;
@@ -37,7 +37,17 @@ h1 {
 
 .welcome {
     grid-area: welcome;
-    background-color: darksalmon;
+    background-color: rgb(41, 41, 66);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+img {
+    height: 4rem;
 }
 
 .todo {
@@ -47,7 +57,7 @@ h1 {
 
 .calendar {
     grid-area: calendar;
-    background-color: firebrick;
+    background-color: lightgray;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
