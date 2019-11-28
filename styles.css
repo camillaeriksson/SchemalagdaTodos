@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Mountains of Christmas', cursive;
-    
 }
+
 .grid-container {
     height: 100vh;
     width: 100vw;
@@ -11,11 +11,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 5rem 7rem 1fr 1fr;
-    grid-template-areas: 
-    "header header header"
-    "welcome calendar calendar"
-    "todo calendar calendar"
-    "todo calendar calendar";
+    grid-template-areas: "header header header" "welcome calendar calendar" "todo calendar calendar" "todo calendar calendar";
 }
 
 header {
@@ -32,7 +28,7 @@ header {
 
 h1 {
     font-size: 3.5rem;
-    text-shadow: 0px 0px 30px rgba(0,0,0,1);
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
 }
 
 .welcome {
@@ -42,7 +38,60 @@ h1 {
 
 .todo {
     grid-area: todo;
-    background-color: darkseagreen;
+    background-color: rgb(164, 194, 230);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.headingandlist {
+    text-align: center;
+}
+
+.todo input[type=checkbox] {
+    margin-right: 0.7rem;
+}
+
+.todo ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-bottom: 1.3rem;
+    font-size: 1.5rem;
+}
+
+.todo input[type=text] {
+    padding: 0.47rem;
+    border: none;
+}
+
+.inputandbutton {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.todo_input {
+    width: 50%;
+}
+
+.date_input {
+    width: 15%;
+}
+
+.todo button {
+    border: .01rem solid white;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    outline: none;
+    color: white;
+}
+
+.todo button:hover {
+    background-color: rgb(28, 110, 177);
+    color: white;
 }
 
 .calendar {
@@ -51,6 +100,5 @@ h1 {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "";
+    grid-template-areas: "";
 }

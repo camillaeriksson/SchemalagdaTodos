@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <script src="./calendar.js"></script>
     <script src="./todos.js"></script>
 </head>
+
 <body>
     <div class="grid-container">
         <header>
@@ -21,7 +23,18 @@
         <div class="welcome">välkommen
         </div>
 
-        <div class="todo">todo
+        <div class="todo">
+            <div class="headingandlist">
+                <h1>To Do</h1>
+                <ul>
+                    <!-- Todos läggs till via Javascript -->
+                </ul>
+            </div>
+            <div class="inputandbutton">
+                <input type="text" class="todo_input" placeholder="To do">
+                <input type="text" class="date_input" placeholder="Datum">
+                <button>Lägg till</button>
+            </div>
         </div>
 
         <main class="calendar">
@@ -35,6 +48,6 @@
                 <p>Sön</p>
             </div>-->
         </main>
-    </div>
 </body>
+
 </html>
