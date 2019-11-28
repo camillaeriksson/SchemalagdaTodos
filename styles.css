@@ -10,9 +10,10 @@
     background-color: cornflowerblue;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 5rem 7rem 1fr 1fr;
+    grid-template-rows: 5rem 2rem 6rem 1fr 1fr;
     grid-template-areas: 
     "header header header"
+    "welcome days days"
     "welcome calendar calendar"
     "todo calendar calendar"
     "todo calendar calendar";
@@ -47,10 +48,28 @@ h1 {
 
 .calendar {
     grid-area: calendar;
-    background-color: firebrick;
+    background-color: rgb(192, 207, 212);
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "";
+}
+
+.days {
+    grid-area: days;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(192, 207, 212);
+    color: white;
+    font-size: 1.3rem;
+
+}
+
+.calendarBoxes {
+    border: lightgray solid 1px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white
 }
