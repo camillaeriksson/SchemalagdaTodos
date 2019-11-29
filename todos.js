@@ -21,6 +21,8 @@ function addTodoListener(event) {
         return;
     }
 
+    //Kopplar value från input till kalender
+    renderArrayInDate(inputDate.value)
 
     // Lägger till listitem (li) i list (ul)
     const liToDoAndDate = createTodoElement(inputToDo.value + " " + inputDate.value + "e");

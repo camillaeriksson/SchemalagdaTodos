@@ -7,7 +7,6 @@ function renderCalender() {
     monthOfDecember()
 }
 
-
 /**
  * Renders dates in the calender 
  */
@@ -32,3 +31,8 @@ function createDate(date) {
     return newDivElement
 }
 
+function renderArrayInDate(dateOfInput) {
+    console.log(dateOfInput)
+}
+//Hur kommer jag åt indexet i array? Utan global variabel
+// Är det bättre med ett objekt?
