@@ -29,53 +29,47 @@ function addTodoListener(event) {
         date: inputDate.value
     })
 
-    printTodoList(inputToDo, inputDate)
+    // Tömmer input-fältet
+    inputToDo.value = "";
+    inputDate.value = "";
 
-
+    printTodoList()
 }
 
-function printTodoList(inputToDo, inputDate) {
+function printTodoList() {
     const listOfTodos = document.querySelector("ul")
+    listOfTodos.innerHTML = ""
 
-    for (let i = 1; i <= todos.length; i++) {
-
-        listOfTodos.innerHTML = ""
-        console.log(todos)
-        todos.forEach((todo) => {
-            // Lägger till listitem (li) i list (ul)
-            todo = createTodoElement(inputToDo.value + " " + inputDate.value + "e");
-            document.querySelector('ul').append(todo);
-
-            // Tömmer input-fältet
-        })
-
-
-        inputToDo.value = "";
-        inputDate.value = "";
-    }
-
-
-    /** Tar bort todo från listan */
-    function removeTodoListener(event) {
-        const li = event.target.parentElement;
-        li.remove();
-    }
-
-    /** Skapar li element med todo samt checkbox*/
-    function createTodoElement(todoText) {
-        //Skapar li
-
-        const li = document.createElement('li');
-
-        // Skapar checkbox
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.addEventListener('click', removeTodoListener);
-
-        // Lägger till checkbox och todo i li
-        li.append(checkbox, todoText);
-
-        return li;
-    }
+    todos.forEach((todo, index) => {
+        // Lägger till listitem (li) i list (ul)
+        todoElement = createTodoElement(todo.text + " " + todo.date + "e", index);
+        document.querySelector('ul').append(todoElement);
+    })
 }
+
+/** Tar bort todo från listan */
+function removeTodoListener(event) {
+    const indexToRemove = event.target.data;
+    todos.splice(indexToRemove, 1)
+    printTodoList()
+}
+
+/** Skapar li element med todo samt checkbox*/
+function createTodoElement(todoText, index) {
+    //Skapar li
+
+    const li = document.createElement('li');
+
+    // Skapar checkbox
+    const checkbox = document.createElement('input');
+    checkbox.data = index
+    checkbox.type = 'checkbox';
+    checkbox.addEventListener('click', removeTodoListener);
+
+    // Lägger till checkbox och todo i li
+    li.append(checkbox, todoText);
+
+    return li;
+}
+
 
