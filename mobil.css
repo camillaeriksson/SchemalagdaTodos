@@ -4,9 +4,10 @@
         "header header header"
         "welcome welcome welcome"
         "todo todo todo"
+        "todo todo todo"
         "todo todo todo";
     }
-    .calendar, .days{
+    .calendar, .days {
         display: none;
     }
     h1 {
