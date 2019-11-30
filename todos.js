@@ -45,6 +45,8 @@ function printTodoList() {
         todoElement = createTodoElement(todo.text + " " + todo.date + "e", index);
         document.querySelector('ul').append(todoElement);
     })
+
+    monthOfDecember()
 }
 
 /** Tar bort todo från listan */
