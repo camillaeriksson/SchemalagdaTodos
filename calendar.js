@@ -1,15 +1,11 @@
 window.addEventListener('load', renderCalender)
 
-/**
- * Starts the functions
- */
+/** Starts of program*/
 function renderCalender() {
     monthOfDecember()
 }
 
-/**
- * Renders dates in the calender 
- */
+/** Renders dates in the calender */
 function monthOfDecember() {
     let datesOfDecember = new Array(31)
     let calendar = document.querySelector('.calendar')
@@ -42,5 +38,3 @@ function renderArrayInDate(dateOfInput) {
 
     console.log(array)
 }
-//Hur kommer jag åt indexet i array? Utan global variabel
-// Är det bättre med ett objekt?
