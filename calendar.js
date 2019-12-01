@@ -13,11 +13,18 @@ function monthOfDecember() {
 
     for (let i = 1; i <= datesOfDecember.length; i++) {
         let numberOfTodos = 0
+        let calendarBox = createDate(i)
+        let todoNumber = document.createElement("p")
+        todoNumber.className = "todoNumber"
+
         todos.forEach((todo) => {
-            if (todo.date == i) { numberOfTodos++ }
+            if (todo.date == i) {
+                numberOfTodos++
+                todoNumber.innerHTML = numberOfTodos
+                calendarBox.appendChild(todoNumber)
+            }
         })
 
-        let calendarBox = createDate(i)
         calendar.appendChild(calendarBox)
     }
 }

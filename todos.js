@@ -49,6 +49,8 @@ function printTodoList() {
         todoElement = createTodoElement(todo.text + " " + todo.date + "e", index);
         document.querySelector('ul').append(todoElement);
     })
+
+    monthOfDecember()
 }
 
 /** Removes todos from array when clicking on them */
