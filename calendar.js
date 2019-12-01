@@ -1,6 +1,6 @@
 window.addEventListener('load', renderCalender)
 
-/** Starts of program*/
+/** Start of program*/
 function renderCalender() {
     monthOfDecember()
 }

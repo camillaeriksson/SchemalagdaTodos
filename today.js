@@ -1,6 +1,6 @@
 window.onload = loadPage
 
-/** Start of profgram */
+/** Start of program */
 function loadPage() {
     weekday()
     date()
