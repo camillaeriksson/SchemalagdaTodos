@@ -1,3 +1,4 @@
+/*Handles design for mobile screens*/
 @media screen and (max-width: 550px) {
     .grid-container {
         grid-template-areas:
@@ -22,6 +23,7 @@
     }
 }
 
+/*Handles design for tablets*/
 @media screen and (max-width: 980px) {
     .welcome {
         font-size: 1rem;
