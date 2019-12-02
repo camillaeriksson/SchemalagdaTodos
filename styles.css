@@ -99,6 +99,10 @@ Goes all the way down to 'calendar section'*/
     color: black;
 }
 
+.todo input[type=checkbox] {
+    margin-right: 0.7rem;
+}
+
 .todo_input {
     width: 50%;
     height: 1.2rem;
