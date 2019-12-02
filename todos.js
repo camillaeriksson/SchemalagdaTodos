@@ -5,7 +5,7 @@ let todos = []
 
 /** Start of program */
 function loadSite() {
-    addButtonListener();
+    addButtonListener()
 }
 
 /** Handles mouse click on button */
