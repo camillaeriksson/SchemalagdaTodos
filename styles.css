@@ -103,6 +103,7 @@ Goes all the way down to 'calendar section'*/
     margin-right: 0.4rem;
     color: #db4743;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .todo_input {

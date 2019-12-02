@@ -53,7 +53,7 @@ function printTodoList() {
 
     // Adds listitem (li) to list (ul)
     todos.forEach((todo, index) => {
-        todoElement = createTodoElement(todo.text + " " + todo.date + "e", index);
+        todoElement = createTodoElement(todo.text + " - " + todo.date + "e", index);
         document.querySelector('ul').append(todoElement);
     })
     monthOfDecember()
@@ -66,7 +66,7 @@ function printTodoList() {
  */
 function removeTodoListener(event) {
     const indexToRemove = event.target.data;
-    console.log(indexToRemove);
+
     todos.splice(indexToRemove, 1)
 
     //Prints updated list
@@ -85,7 +85,7 @@ function createTodoElement(todoText, index) {
     // Creates checkbox
     const cross = document.createElement('i');
     cross.data = index;
-    cross.innerHTML = '<i class="fas fa-times"></i>'
+    cross.innerHTML = 'x'
     cross.addEventListener('click', removeTodoListener);
 
     // Adds checkbox and todo in li
