@@ -1,15 +1,11 @@
 window.addEventListener('load', renderCalender)
 
-/**
- * Starts the functions
- */
+/** Start of program*/
 function renderCalender() {
     monthOfDecember()
 }
 
-/**
- * Renders dates and number of todos in the calender
- */
+/** Renders dates in the calender */
 function monthOfDecember() {
     let datesOfDecember = new Array(31)
     let calendar = document.querySelector('.calendar')
@@ -44,3 +40,8 @@ function createDate(date) {
     return newDivElement
 }
 
+function renderArrayInDate(dateOfInput) {
+    console.log(dateOfInput)
+
+    console.log(array)
+}
