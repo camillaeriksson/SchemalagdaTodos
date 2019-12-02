@@ -15,15 +15,22 @@ function addButtonListener() {
 }
 
 /** Adds todo to list */
-function addTodoListener(event) {
+function addTodoListener() {
     const inputToDo = document.querySelector(".todo_input");
     const inputDate = document.querySelector(".date_input");
+    const wrongInput = document.querySelector(".wronginput");
 
     // Handles wrong input from user
     if (isNaN(inputDate.value) || inputDate.value < 1 || inputDate.value > 31) {
-        alert("Ange ett nummer, 1 - 31.");
+        wrongInput.innerHTML = "Ange ett nummer, 1 - 31"
+        inputDate.value = "";
         return;
     }
+
+    else {
+        wrongInput.innerHTML = "";
+    }
+
     // Adds todo and date to array
     todos.push({
         text: inputToDo.value,
@@ -49,32 +56,40 @@ function printTodoList() {
         todoElement = createTodoElement(todo.text + " " + todo.date + "e", index);
         document.querySelector('ul').append(todoElement);
     })
-
     monthOfDecember()
 }
 
-/** Removes todos from array when clicking on them */
+
+/**
+ * Removes todos from array when clicking on them
+ * @param {MouseEvent} event Built in event in JavaScript
+ */
 function removeTodoListener(event) {
     const indexToRemove = event.target.data;
+    console.log(indexToRemove);
     todos.splice(indexToRemove, 1)
 
     //Prints updated list
     printTodoList()
 }
 
-/** Creates li element with todo and checkbox*/
+/**
+ * Creates li element with todo and checkbox
+ * @param {string} todoText Text from todo input field
+ * @param {number} index The index of the todo in the array
+ */
 function createTodoElement(todoText, index) {
     //Creates li
     const li = document.createElement('li');
 
     // Creates checkbox
-    const checkbox = document.createElement('input');
-    checkbox.data = index
-    checkbox.type = 'checkbox';
-    checkbox.addEventListener('click', removeTodoListener);
+    const cross = document.createElement('i');
+    cross.data = index;
+    cross.innerHTML = '<i class="fas fa-times"></i>'
+    cross.addEventListener('click', removeTodoListener);
 
     // Adds checkbox and todo in li
-    li.append(checkbox, todoText);
+    li.append(cross, todoText);
 
     return li;
 }
