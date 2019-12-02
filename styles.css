@@ -105,6 +105,8 @@ Goes all the way down to 'calendar section'*/
     cursor: pointer;
     font-weight: bold;
     font-style: normal;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.3rem;
 }
 
 .todo_input {
