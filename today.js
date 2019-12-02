@@ -1,5 +1,8 @@
 window.onload = loadPage
 
+/**
+ * This function starts the other functions, when the page is loaded
+ */
 function loadPage() {
     weekday()
     date()
@@ -7,6 +10,9 @@ function loadPage() {
     setInterval(time, 1000)
 }
 
+/**
+ * This function displays current weekday
+ */
 function weekday() {
     let day = new Date()
     weekday[0] = "Söndag"
@@ -21,6 +27,9 @@ function weekday() {
     document.querySelector(".weekday").innerText = lista
 }
 
+/**
+ * This function displays todays date
+ */
 function date() {
     let today = new Date()
     let dd = String(today.getDate()).padStart(2, '0')
@@ -31,6 +40,9 @@ function date() {
     document.querySelector(".date").innerText = today
 }
 
+/**
+ * This function displays the time live
+ */
 function time() {
     let time = new Date()
     let currentTime = 

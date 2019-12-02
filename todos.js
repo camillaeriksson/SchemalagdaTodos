@@ -4,8 +4,9 @@ let todos = []
 
 /** Starta programmet */
 function loadSite() {
-    addButtonListener();
+    addButtonListener()
 }
+
 
 /** Kör function vid knapptryck */
 function addButtonListener() {
@@ -45,6 +46,7 @@ function printTodoList() {
         todoElement = createTodoElement(todo.text + " " + todo.date + "e", index);
         document.querySelector('ul').append(todoElement);
     })
+    console.log(todos)
 }
 
 /** Tar bort todo från listan */
