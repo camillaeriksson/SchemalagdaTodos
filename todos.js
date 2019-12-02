@@ -4,8 +4,9 @@ let todos = []
 
 /** Starta programmet */
 function loadSite() {
-    addButtonListener();
+    addButtonListener()
 }
+
 
 /** Kör function vid knapptryck */
 function addButtonListener() {
