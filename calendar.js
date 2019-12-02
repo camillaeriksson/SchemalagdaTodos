@@ -8,7 +8,7 @@ function renderCalender() {
 }
 
 /**
- * Renders dates in the calender 
+ * Renders dates and number of todos in the calender
  */
 function monthOfDecember() {
     let datesOfDecember = new Array(31)
@@ -17,11 +17,18 @@ function monthOfDecember() {
 
     for (let i = 1; i <= datesOfDecember.length; i++) {
         let numberOfTodos = 0
+        let calendarBox = createDate(i)
+        let todoNumber = document.createElement("p")
+        todoNumber.className = "todoNumber"
+
         todos.forEach((todo) => {
-            if (todo.date == i) { numberOfTodos++ }
+            if (todo.date == i) {
+                numberOfTodos++
+                todoNumber.innerHTML = numberOfTodos
+                calendarBox.appendChild(todoNumber)
+            }
         })
 
-        let calendarBox = createDate(i)
         calendar.appendChild(calendarBox)
     }
 }
@@ -37,10 +44,3 @@ function createDate(date) {
     return newDivElement
 }
 
-function renderArrayInDate(dateOfInput) {
-    console.log(dateOfInput)
-
-    console.log(array)
-}
-//Hur kommer jag åt indexet i array? Utan global variabel
-// Är det bättre med ett objekt?
