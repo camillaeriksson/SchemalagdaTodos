@@ -1,4 +1,4 @@
-window.addEventListener('load', renderCalender)
+window.addEventListener('load', renderCalender);
 
 /** Start of program*/
 function renderCalender() {
@@ -7,25 +7,25 @@ function renderCalender() {
 
 /** Renders dates in the calender */
 function monthOfDecember() {
-    let datesOfDecember = new Array(31)
-    let calendar = document.querySelector('.calendar')
-    calendar.innerHTML = ""
+    let datesOfDecember = new Array(31);
+    let calendar = document.querySelector('.calendar');
+    calendar.innerHTML = "";
 
     for (let i = 1; i <= datesOfDecember.length; i++) {
-        let numberOfTodos = 0
-        let calendarBox = createDate(i)
-        let todoNumber = document.createElement("p")
-        todoNumber.className = "todoNumber"
+        let numberOfTodos = 0;
+        let calendarBox = createDate(i);
+        let todoNumber = document.createElement("p");
+        todoNumber.className = "todoNumber";
 
         todos.forEach((todo) => {
             if (todo.date == i) {
-                numberOfTodos++
-                todoNumber.innerHTML = numberOfTodos
-                calendarBox.appendChild(todoNumber)
+                numberOfTodos++;
+                todoNumber.innerHTML = numberOfTodos;
+                calendarBox.appendChild(todoNumber);
             }
         })
 
-        calendar.appendChild(calendarBox)
+        calendar.appendChild(calendarBox);
     }
 }
 
