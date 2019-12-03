@@ -68,6 +68,7 @@ Goes all the way down to 'calendar section'*/
 
 .headingandlist {
     text-align: center;
+    height: 80%;
 }
 
 /*UL that is created with JavaScript*/
@@ -75,7 +76,7 @@ Goes all the way down to 'calendar section'*/
     list-style-type: none;
     font-size: 1rem;
     padding: 0.5rem;
-    max-height: 14rem;
+    max-height: 65%;
     overflow: auto;
     font-family: Verdana, Tahoma, sans-serif;
 }
@@ -90,7 +91,7 @@ Goes all the way down to 'calendar section'*/
     justify-content: space-around;
     align-items: flex-end;
     flex-wrap: wrap;
-    padding: 1rem;
+    padding: 0.6rem;
 }
 
 .todo input[type=text] {
