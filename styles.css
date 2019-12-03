@@ -76,7 +76,7 @@ Goes all the way down to 'calendar section'*/
     list-style-type: none;
     font-size: 1rem;
     padding: 0.5rem;
-    max-height: 65%;
+    max-height: 55vh;
     overflow: auto;
     font-family: Verdana, Tahoma, sans-serif;
 }
