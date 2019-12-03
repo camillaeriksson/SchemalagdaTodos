@@ -35,13 +35,11 @@ function monthOfDecember() {
  */
 function createDate(date) {
     let newDivElement = document.createElement("div")
-    newDivElement.innerHTML += (date)
+    let printedDate = document.createElement("h4")
+    printedDate.innerHTML += (date)
     newDivElement.className = "calendarBoxes"
+    printedDate.className = "printedDate"
+    newDivElement.appendChild(printedDate)
     return newDivElement
 }
 
-function renderArrayInDate(dateOfInput) {
-    console.log(dateOfInput)
-
-    console.log(array)
-}
