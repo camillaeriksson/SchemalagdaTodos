@@ -21,6 +21,9 @@
     .welcome {
         font-size: 1.4rem;
     }
+
+    .todo ul {
+        max-height: 51vh;
 }
 
 /*Handles design for tablets*/
