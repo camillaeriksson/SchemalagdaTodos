@@ -161,6 +161,7 @@ Goes all the way down to 'calendar section'*/
     font-size: 1.3rem;
 }
 
+/*Div, todos and date rendered in each column in calendar*/
 .calendarBoxes {
     border: lightgray solid 1px;
     font-size: 2.2rem;
@@ -187,4 +188,9 @@ Goes all the way down to 'calendar section'*/
     justify-content: center;
     align-items: center;
     font-weight: 400;
+}
+
+/*Makes the first boxes in the calendar not visable*/
+.calendarBoxes:nth-child(-n+6) {
+    visibility: hidden;    
 }

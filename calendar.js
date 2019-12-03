@@ -11,7 +11,7 @@ function monthOfDecember() {
     let calendar = document.querySelector('.calendar');
     calendar.innerHTML = "";
 
-    for (let i = 1; i <= datesOfDecember.length; i++) {
+    for (let i = -5; i <= datesOfDecember.length; i++) {
         let numberOfTodos = 0;
         let calendarBox = createDate(i);
         let todoNumber = document.createElement("p");
