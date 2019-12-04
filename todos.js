@@ -5,7 +5,29 @@ let todos = []
 
 /** Start of program */
 function loadSite() {
-    addButtonListener()
+    addButtonListener();
+    addEnterListener();
+}
+
+/**
+ * Applies keyup event on input fields
+ */
+function addEnterListener() {
+    document.querySelector('.todo_input').addEventListener("keyup", handleKeyUp);
+    document.querySelector('.date_input').addEventListener("keyup", handleKeyUp);
+}
+
+/**
+ * Handles keyup on enter and runs addToDoListener if enter is pushed
+ * @param {KeyboardEvent} event Built in event in Java Script
+ */
+function handleKeyUp(event) {
+    if (event.key === "Enter") {
+        addTodoListener();
+    }
+
+
+
 }
 
 /** Handles mouse click on button */
