@@ -1,7 +1,7 @@
 window.addEventListener('load', loadSite);
 
 //Array for todos
-let todos = []
+let todos = [];
 
 /** Start of program */
 function loadSite() {
@@ -25,9 +25,6 @@ function handleKeyUp(event) {
     if (event.key === "Enter") {
         addTodoListener();
     }
-
-
-
 }
 
 /** Handles mouse click on button */
@@ -44,7 +41,7 @@ function addTodoListener() {
 
     // Handles wrong input from user
     if (isNaN(inputDate.value) || inputDate.value < 1 || inputDate.value > 31) {
-        wrongInput.innerHTML = "Ange ett nummer, 1 - 31"
+        wrongInput.innerHTML = "Ange ett nummer, 1 - 31";
         inputDate.value = "";
         return;
     }
@@ -57,28 +54,28 @@ function addTodoListener() {
     todos.push({
         text: inputToDo.value,
         date: inputDate.value
-    })
+    });
 
     // Empties the input fields
     inputToDo.value = "";
     inputDate.value = "";
 
     // Prints todo-list
-    printTodoList()
+    printTodoList();
 }
 
 /** Prints todo-list on DOM */
 function printTodoList() {
-    const listOfTodos = document.querySelector("ul")
+    const listOfTodos = document.querySelector("ul");
     //Empties the whole list of todos before printing the updated one
-    listOfTodos.innerHTML = ""
+    listOfTodos.innerHTML = "";
 
     // Adds listitem (li) to list (ul)
     todos.forEach((todo, index) => {
         todoElement = createTodoElement(todo.text + " - " + todo.date + "e", index);
         document.querySelector('ul').append(todoElement);
-    })
-    monthOfDecember()
+    });
+    monthOfDecember();
 }
 
 
@@ -89,10 +86,10 @@ function printTodoList() {
 function removeTodoListener(event) {
     const indexToRemove = event.target.data;
 
-    todos.splice(indexToRemove, 1)
+    todos.splice(indexToRemove, 1);
 
     //Prints updated list
-    printTodoList()
+    printTodoList();
 }
 
 /**
@@ -107,7 +104,7 @@ function createTodoElement(todoText, index) {
     // Creates checkbox
     const cross = document.createElement('i');
     cross.data = index;
-    cross.innerHTML = 'x'
+    cross.innerHTML = 'x';
     cross.addEventListener('click', removeTodoListener);
 
     // Adds checkbox and todo in li

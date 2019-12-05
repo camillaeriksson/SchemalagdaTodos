@@ -2,7 +2,7 @@ window.addEventListener('load', renderCalender);
 
 /** Start of program*/
 function renderCalender() {
-    monthOfDecember()
+    monthOfDecember();
 }
 
 /** Renders dates in the calender */
@@ -23,7 +23,7 @@ function monthOfDecember() {
                 todoNumber.innerHTML = numberOfTodos;
                 calendarBox.appendChild(todoNumber);
             }
-        })
+        });
 
         calendar.appendChild(calendarBox);
     }
@@ -34,12 +34,12 @@ function monthOfDecember() {
  * @param {HTMLDivElement} date the current index
  */
 function createDate(date) {
-    let newDivElement = document.createElement("div")
-    let printedDate = document.createElement("h4")
-    printedDate.innerHTML += (date)
-    newDivElement.className = "calendarBoxes"
-    printedDate.className = "printedDate"
-    newDivElement.appendChild(printedDate)
-    return newDivElement
+    let newDivElement = document.createElement("div");
+    let printedDate = document.createElement("h4");
+    printedDate.innerHTML += (date);
+    newDivElement.className = "calendarBoxes";
+    printedDate.className = "printedDate";
+    newDivElement.appendChild(printedDate);
+    return newDivElement;
 }
 

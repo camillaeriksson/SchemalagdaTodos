@@ -2,10 +2,10 @@ window.onload = loadPage;
 
 /** Start of program */
 function loadPage() {
-    weekday()
-    date()
-    time()
-    setInterval(time, 1000)
+    weekday();
+    date();
+    time();
+    setInterval(time, 1000);
 }
 
 /** Contains array for weekdays and prints the current day */
