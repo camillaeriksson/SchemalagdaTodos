@@ -24,7 +24,7 @@
 
     .todo ul {
         max-height: 51vh;
-}
+    }
 }
 
 /*Handles design for tablets*/
@@ -35,6 +35,5 @@
     .todoNumber {
         font-size: 0.4rem;
         width: 0.4rem;
-        
     }
 }
